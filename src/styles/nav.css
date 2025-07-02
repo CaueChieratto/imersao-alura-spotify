@@ -1,0 +1,159 @@
+nav {
+  width: 300px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--text-sub);
+}
+
+.navOne {
+  height: 127px;
+  border-radius: 8px;
+  padding: 16px 0 10px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.logo img {
+  width: 80px;
+  cursor: pointer;
+}
+
+.navMenu {
+  padding-left: 4px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navMenuItems {
+  color: var(--text-sub);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.navMenuItems:hover {
+  color: var(--text-base-light);
+}
+
+.navMenuItems .fa {
+  font-size: 20px;
+  margin-right: 10px;
+  font-weight: 300;
+}
+
+.library {
+  background-color: var(--bg-icon);
+  height: 325px;
+  border-radius: 8px;
+  padding: 4px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.libraryContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px;
+}
+
+.iconLibrary {
+  display: flex;
+  gap: 18px;
+  cursor: pointer;
+}
+
+.iconLibrary .fa {
+  font-size: 20px;
+}
+
+.iconLibrary div {
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+}
+
+.iconPlus {
+  font-size: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+
+.sectionPlaylist {
+  padding: 16px 20px;
+  border-radius: 8px;
+  background-color: #242424;
+}
+
+.sectionPlaylistContent {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sectionPlaylistContent span {
+  color: var(--text-base-light);
+}
+
+.sectionPlaylistContent span:first-of-type {
+  font-weight: 700;
+}
+
+.sectionPlaylistContent span:last-of-type {
+  font-weight: 500;
+  font-size: 12.8px;
+}
+
+.sectionPlaylistContent button {
+  margin-top: 12px;
+  background-color: var(--text-base-light);
+  color: var(--text-base-dark);
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 12.8px;
+  font-family: "Montserrat", sans-serif;
+  padding: 10px;
+  width: 113px;
+}
+
+.cookies {
+  margin: 25px 20px;
+}
+
+.cookies a {
+  color: #b3b3b3;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 10px;
+}
+
+.cookies a:hover {
+  text-decoration: underline;
+}
+
+.languages {
+  margin-left: 8px;
+}
+
+.languages button {
+  background-color: transparent;
+  border: 1px solid #878787;
+  border-radius: 9999px;
+  cursor: pointer;
+  color: var(--text-base-light);
+  padding: 8px;
+  width: 170px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
