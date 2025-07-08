@@ -109,6 +109,10 @@ body {
   padding: 12px;
 }
 
+.signupBody {
+  background: var(--bg-icon);
+}
+
 ol,
 ul {
   list-style: none;
@@ -150,4 +154,8 @@ button {
 
 .cardBackground {
   background-color: var(--bg-icon);
+}
+
+.hidden {
+  display: none !important;
 }

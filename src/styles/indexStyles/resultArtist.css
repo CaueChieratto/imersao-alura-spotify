@@ -4,10 +4,6 @@
   --min-container-width: 372px;
 }
 
-.hidden {
-  display: none;
-}
-
 .grid-container {
   grid-gap: var(--grid-gap);
   display: grid;
@@ -106,4 +102,25 @@
 
 #result-artist {
   padding: 20px 40px;
+}
+
+@media (max-width: 1274px) and (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    min-width: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    min-width: 0;
+    gap: 8px;
+  }
+  .artist-card {
+    padding: 6px;
+  }
+  #result-artist {
+    padding: 4px;
+  }
 }

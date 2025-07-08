@@ -86,3 +86,34 @@
 .loginButton:hover {
   transform: scale(1.04);
 }
+
+@media (max-width: 1274px) and (min-width: 768px) {
+  .headerNavigation {
+    width: 100%;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .search {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .headerNavigation {
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px;
+  }
+  .search {
+    width: 100%;
+    margin-left: 0;
+  }
+  .loginButton,
+  .subscribe {
+    font-size: 12px;
+    height: 36px;
+    width: 80px;
+    margin-right: 8px;
+  }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imersão Alura</title>
+    <link
+      rel="shortcut icon"
+      href="./src/assets/icons/favicon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="src/styles/reset.css" />
+    <link rel="stylesheet" href="src/styles/vars.css" />
+    <link rel="stylesheet" href="src/styles/signupStyles/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css"
+      integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css"
+      integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="signupBody">
+    <header>
+      <img src="src/assets/icons/logo.png" />
+      <div class="progressBar hidden">
+        <div class="progressBarCompleted"></div>
+        <div class="stepsToRegister hidden">
+          <button
+            id="backIcon"
+            onclick="back('.containerForm', '.containerFormPassword', '.containerFormYou', '.containerFinalRequest')"
+          >
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <section>
+            <div id="steps">Etapa 1 de 3</div>
+            <div id="stepsText">Crie uma senha</div>
+          </section>
+        </div>
+      </div>
+    </header>
+    <main>
+      <h1>Se inscreva e comece a curtir</h1>
+      <form>
+        <div class="containerForm">
+          <div class="inputEmail">
+            <p class="nameInput">Endereço de e-mail</p>
+            <input type="text" placeholder="nome@dominio.com" id="email" />
+            <div class="invalidEmail hidden">
+              <span class="fas fa-exclamation-circle"></span>
+              <span
+                >Esse e-mail é inválido. O formato correto é assim:
+                exemplo@email.com</span
+              >
+            </div>
+          </div>
+          <button id="saveEmail">Avançar</button>
+        </div>
+      </form>
+      <section id="loginQuestion">
+        <span>Já tem uma conta? <a href="">Faça login aqui</a></span>
+      </section>
+    </main>
+    <script src="src/js/signupJS/script.js"></script>
+  </body>
+</html>

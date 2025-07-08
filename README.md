@@ -52,6 +52,10 @@ src/
 - Visualização de playlists na tela inicial.
 - Busca de artistas pelo nome.
 - Exibição de informações do artista ao buscar.
+- Cadastro de usuário com validação de e-mail, senha e dados pessoais.
+- Login automático após cadastro.
+- Saudação personalizada de acordo com o horário e nome do usuário logado.
+- Dados de cadastro e login salvos no localStorage.
 
 ## Tecnologias utilizadas
 
