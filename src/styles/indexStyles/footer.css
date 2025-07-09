@@ -23,7 +23,11 @@ footer {
   font-weight: 500;
 }
 
-.containerButton button {
+.containerButton {
+  display: flex;
+}
+
+.containerButton a {
   background-color: #ffffff;
   color: #000000;
   font-size: 16px;
@@ -32,18 +36,4 @@ footer {
   border: 0px;
   border-radius: 40px;
   cursor: pointer;
-}
-
-@media (max-width: 767px) {
-  footer {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px 8px;
-    font-size: 12px;
-  }
-  .containerButton button {
-    width: 100%;
-    padding: 10px 0;
-    font-size: 14px;
-  }
 }

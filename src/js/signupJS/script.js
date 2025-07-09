@@ -13,6 +13,10 @@ const loginQuestion = document.getElementById("loginQuestion");
 
 const regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const regexPassword = /^(?=.*[a-zA-Z])(?=.*[\d\W]).{10,}$/;
+const regexName = /^[a-zA-Z\s]{3,}$/;
+const regexDay = /^(0?[1-9]|[12][0-9]|3[01])$/;
+const regexMonth = /^(1[0-2]|[1-9])$/;
+const regexYear = /^\d{4}$/;
 
 let account = JSON.parse(localStorage.getItem("accounts")) || [];
 let currentAccount = {};
@@ -28,10 +32,10 @@ emailInput.addEventListener("blur", () => {
   if (!checkEmail) {
     invalidEmail.classList.remove("hidden");
     emailInput.classList.add("inputInvalidEmail");
-  } else {
-    invalidEmail.classList.add("hidden");
-    emailInput.classList.remove("inputInvalidEmail");
+    return;
   }
+  invalidEmail.classList.add("hidden");
+  emailInput.classList.remove("inputInvalidEmail");
 });
 
 buttonSaveEmail.addEventListener("click", (e) => {
@@ -110,18 +114,18 @@ function createForm() {
                   <input type="text" id="year" placeholder="aaaa" />
                 </div>
                 <div class="invalidName hidden dateForm">
-                  <div class="iconAndMessage">
+                  <div class="iconAndMessage hidden">
                     <span class="fas fa-exclamation-circle"></span>
                     <span
                       >Insira o dia que você nasceu usando um número entre 1 e
                       31.</span
                     >
                   </div>
-                  <div class="iconAndMessage">
+                  <div class="iconAndMessage hidden">
                     <span class="fas fa-exclamation-circle"></span>
                     <span>Selecione o mês de nascimento.</span>
                   </div>
-                  <div class="iconAndMessage">
+                  <div class="iconAndMessage hidden">
                     <span class="fas fa-exclamation-circle"></span>
                     <span
                       >Insira o ano que você nasceu usando quatro dígitos (por
@@ -155,9 +159,87 @@ function createForm() {
     `;
 
     form.appendChild(containerFormYou);
+
+    const inputName = document.getElementById("name");
+    inputName.addEventListener("blur", () => {
+      sendMessageError();
+    });
+
+    errorInDates();
   }
   savePersonalInfo();
   setupGenderCheckbox();
+}
+
+function errorInDates() {
+  const dayInput = document.getElementById("day");
+  const monthSelect = document.getElementById("month");
+  const monthContainer = document.querySelector(".month");
+  const yearInput = document.getElementById("year");
+
+  const dateForm = document.querySelector(".dateForm");
+  const messageInvalid = dateForm.children;
+
+  function validateField(field) {
+    for (let msg of messageInvalid) {
+      msg.classList.add("hidden");
+    }
+
+    dayInput.classList.remove("inputInvalid");
+    monthContainer.classList.remove("inputInvalid");
+    yearInput.classList.remove("inputInvalid");
+
+    let invalid = false;
+
+    if (regexDay.test(dayInput.value.trim())) {
+      dayInput.classList.remove("inputInvalid");
+      messageInvalid[0].classList.add("hidden");
+    } else {
+      dayInput.classList.add("inputInvalid");
+      messageInvalid[0].classList.remove("hidden");
+      invalid = true;
+    }
+
+    if (regexMonth.test(monthSelect.value.trim())) {
+      monthContainer.classList.remove("inputInvalid");
+      messageInvalid[1].classList.add("hidden");
+    } else {
+      monthContainer.classList.add("inputInvalid");
+      messageInvalid[1].classList.remove("hidden");
+      invalid = true;
+    }
+
+    if (regexYear.test(yearInput.value.trim())) {
+      yearInput.classList.remove("inputInvalid");
+      messageInvalid[2].classList.add("hidden");
+    } else {
+      yearInput.classList.add("inputInvalid");
+      messageInvalid[2].classList.remove("hidden");
+      invalid = true;
+    }
+
+    dateForm.classList.toggle("hidden", !invalid);
+  }
+
+  dayInput.addEventListener("input", () => validateField(dayInput));
+  monthSelect.addEventListener("input", () => validateField(monthSelect));
+  yearInput.addEventListener("input", () => validateField(yearInput));
+}
+
+function sendMessageError() {
+  const inputName = document.getElementById("name");
+
+  const invalidName = document.querySelector(".invalidName");
+  const checkName = regexName.test(inputName.value);
+
+  if (!checkName) {
+    invalidName.classList.add("hidden");
+    inputName.classList.remove("inputInvalid");
+    return;
+  }
+
+  invalidName.classList.remove("hidden");
+  inputName.classList.add("inputInvalid");
 }
 
 function setupGenderCheckbox() {
@@ -255,11 +337,6 @@ function createFinalLoginRequest() {
                 >.
               </p>
             </label>
-
-            <div class="invalidCheckbox hidden">
-              <span class="fas fa-exclamation-circle"></span>
-              <span>Aceite os termos e condições para continuar.</span>
-            </div>
           </div>
 
           <p class="p">

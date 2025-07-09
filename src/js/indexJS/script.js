@@ -5,15 +5,6 @@ const playlistContainer = document.querySelector(".playlistContainer");
 
 const loggedAccount = JSON.parse(localStorage.getItem("loggedAccount"));
 
-if (loggedAccount) {
-  // Exemplo: mostrar nome do usuário logado
-  console.log("Usuário logado:", loggedAccount.name);
-  // Você pode acessar qualquer campo: loggedAccount.email, loggedAccount.gender, etc.
-} else {
-  // Ninguém logado
-  console.log("Nenhum usuário logado");
-}
-
 function requestApi(searchTerm) {
   const url = `http://localhost:3000/artists?name_like=${searchTerm}`;
   fetch(url)
