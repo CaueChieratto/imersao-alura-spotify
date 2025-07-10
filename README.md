@@ -54,8 +54,13 @@ src/
 - Exibição de informações do artista ao buscar.
 - Cadastro de usuário com validação de e-mail, senha e dados pessoais.
 - Login automático após cadastro.
+- Login de usuário com validação.
 - Saudação personalizada de acordo com o horário e nome do usuário logado.
 - Dados de cadastro e login salvos no localStorage.
+- Troca de visibilidade da senha no login e cadastro.
+- Validação de campos em todas as etapas do cadastro.
+- Fluxo de cadastro dividido em etapas (e-mail, senha, dados pessoais, termos).
+- Layout responsivo e estilizado com CSS customizado.
 
 ## Tecnologias utilizadas
 
@@ -66,4 +71,4 @@ src/
 
 ## Créditos
 
-Desenvolvido durante a Imersão
+Desenvolvido durante a Imersão Alura

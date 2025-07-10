@@ -1,0 +1,173 @@
+.loginBody {
+  background: linear-gradient(#ffffff1a 0%, #000000 100%);
+  background-color: #121212;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0 !important;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  padding: 32px;
+}
+
+.cardLogin {
+  background-color: #121212;
+  border-radius: 8px;
+  max-width: 663px;
+  width: 100%;
+  min-height: 650px;
+}
+
+.loginBody footer {
+  background-color: #121212;
+  width: 100%;
+  min-height: 73px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: rgb(179, 179, 179);
+  font-weight: 400;
+}
+
+.loginBody footer a {
+  text-decoration: underline;
+  color: rgb(179, 179, 179);
+  cursor: pointer;
+}
+
+.cardLogin header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cardLogin header img {
+  width: 38px;
+  padding: 60px 0 8px 0;
+}
+.cardLogin header p {
+  font-size: 32px;
+  color: var(--text-base-light);
+  font-weight: 700;
+}
+
+.hr {
+  margin: 32px 100px;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+  border-image: initial;
+  border-top: 1px solid rgb(41, 41, 41);
+}
+
+.cardLogin main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.formLogin {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 324px;
+}
+
+.formLogin button {
+  margin-top: 46px;
+  border-radius: 9999px;
+  cursor: pointer;
+  width: 323px;
+  height: 48px;
+  background-color: #1ed760;
+  font-size: 16px;
+  color: #000000;
+  font-weight: 700;
+}
+
+.formLogin button:hover {
+  background-color: #3be477;
+  transform: scale(1.04);
+}
+
+.formLogin button:active {
+  background-color: #1abc54;
+  transform: scale(1);
+}
+
+.containerInputsLogin {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+.iconPassword {
+  position: absolute;
+  bottom: 22%;
+  right: 6%;
+  cursor: pointer;
+}
+
+.containerInputsLogin p {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-base-light);
+}
+
+.containerInputsLogin input {
+  width: 261px;
+  height: 21px;
+  padding: 12px 48px 12px 12px;
+  background-color: transparent;
+  border: 1px solid #818181;
+  outline: none;
+  border-radius: 4px;
+  color: var(--text-base-light);
+  font-size: 16px;
+}
+
+.containerInputsLogin input::placeholder {
+  font-weight: 400;
+}
+
+.containerInputsLogin input:focus {
+  outline: 1px solid #fff;
+}
+
+.containerInputsLogin input:hover {
+  border: 1px solid #fff;
+}
+
+.passwordInvalid,
+.inputInvalid {
+  border: 1px solid #ed2c3f !important;
+}
+.passwordInvalid:focus,
+.inputInvalid:focus {
+  outline: 1px solid #ed2c3f !important;
+}
+
+.subscribeP {
+  color: rgb(179, 179, 179);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.subscribeP a {
+  color: var(--text-base-light);
+  margin-left: 8px;
+  text-decoration: underline;
+}
+
+.subscribeP a:hover {
+  color: rgb(30, 215, 96);
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imersão Alura</title>
+    <link
+      rel="shortcut icon"
+      href="./src/assets/icons/favicon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="src/styles/reset.css" />
+    <link rel="stylesheet" href="src/styles/vars.css" />
+    <link rel="stylesheet" href="src/styles/loginStyles/login.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css"
+      integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css"
+      integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="loginBody">
+    <section class="loginContainer">
+      <div class="cardLogin">
+        <header>
+          <img src="src/assets/icons/logo.png" id="back" />
+          <p>Entrar no Spotify</p>
+        </header>
+        <hr class="hr" />
+        <main>
+          <form class="formLogin">
+            <div class="containerInputsLogin">
+              <p>E-mail ou nome de usuário</p>
+              <input
+                type="text"
+                placeholder="E-mail ou nome de usuário"
+                id="email"
+              />
+            </div>
+            <div class="containerInputsLogin">
+              <p>Senha</p>
+              <input type="password" placeholder="Senha" id="password" />
+              <i class="fas fa-eye-slash iconPassword close show"></i>
+              <i class="fas fa-eye iconPassword open hidden"></i>
+            </div>
+            <button id="login">Entrar</button>
+          </form>
+          <p class="subscribeP">
+            Não tem uma conta? <a href="signup.html">Inscrever-se no Spotify</a>
+          </p>
+        </main>
+      </div>
+    </section>
+    <footer>
+      <div>
+        Este site é protegido pelo reCAPTCHA e está sujeito à
+        <a href="https://policies.google.com/privacy"
+          >Política de Privacidade</a
+        >
+        e aos
+        <a href="https://policies.google.com/terms">Termos de Serviço</a> do
+        Google.
+      </div>
+    </footer>
+    <script src="src/js/loginJS/login.js"></script>
+  </body>
+</html>

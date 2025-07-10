@@ -86,14 +86,25 @@ const now = new Date();
 const hour = now.getHours();
 
 if (hour >= 4 && hour < 12) {
-  greeting.textContent = `Bom dia ${loggedAccount.name}`;
+  greeting.textContent = loggedAccount
+    ? `Bom dia ${loggedAccount.name}`
+    : "Bom dia";
 } else if (hour >= 12 && hour < 18) {
-  greeting.textContent = `Boa tarde ${loggedAccount.name}`;
+  greeting.textContent = loggedAccount
+    ? `Boa tarde ${loggedAccount.name}`
+    : "Boa tarde";
 } else {
-  greeting.textContent = `Boa noite ${loggedAccount.name}`;
+  greeting.textContent = loggedAccount
+    ? `Boa noite ${loggedAccount.name}`
+    : "Boa noite";
 }
 
 const subscribe = document.querySelector(".subscribe");
 subscribe.addEventListener("click", () => {
   window.location.href = "signup.html";
+});
+
+const login = document.querySelector(".loginButton");
+login.addEventListener("click", () => {
+  window.location.href = "login.html";
 });
