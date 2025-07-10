@@ -60,7 +60,6 @@ src/
 - Troca de visibilidade da senha no login e cadastro.
 - Validação de campos em todas as etapas do cadastro.
 - Fluxo de cadastro dividido em etapas (e-mail, senha, dados pessoais, termos).
-- Layout responsivo e estilizado com CSS customizado.
 
 ## Tecnologias utilizadas
 
